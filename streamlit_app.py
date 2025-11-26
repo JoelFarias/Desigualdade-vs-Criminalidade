@@ -27,7 +27,7 @@ def load_and_process_data():
     
     try:
         # Carregar dataset integrado final
-        data = pd.read_csv(f"{base_path}/dados_integrados_ride_final.csv")
+        data = pd.read_csv(f"dados_integrados_ride_final.csv")
         
         # Limpar dados
         data = data.dropna(subset=['crimes_total', 'desigualdade'])
@@ -40,7 +40,7 @@ def load_and_process_data():
         return data
     
     except FileNotFoundError:
-        st.error(f"Arquivo dados_integrados_ride_final.csv nao encontrado em {base_path}")
+        st.error(f"dados_integrados_ride_final.csv")
         return None
     
     except Exception as e:
@@ -782,6 +782,7 @@ elif page == "Conclusoes":
     - **F-estatistica**: {model.fvalue:.4f} (p = {model.f_pvalue:.6f})
     - **Validacao Cruzada**: K-Fold (k=5) recomendado para amostras pequenas
     """)
+
 
 
 

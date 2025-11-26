@@ -23,7 +23,7 @@ def load_and_process_data():
     """Carrega dados integrados (crime + ipeadata + SUS + Base_MUNIC 2021)"""
     
     # Caminho base
-    base_path = "c:/Users/joelc/OneDrive/Documentos/Amostragem"
+    base_path = ""
     
     try:
         # Carregar dataset integrado final
@@ -782,5 +782,6 @@ elif page == "Conclusoes":
     - **F-estatistica**: {model.fvalue:.4f} (p = {model.f_pvalue:.6f})
     - **Validacao Cruzada**: K-Fold (k=5) recomendado para amostras pequenas
     """)
+
 
 
